@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indexstyle.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Dhana's Blog</title>
+</head>
+
+<body>
+    <script>
+
+        function main() {
+
+            (function () {
+                'use strict';
+                /* ==============================================
+                   Page Scrolling
+                   =============================================== */
+
+                $('a.scroll-nav').click(function () {
+                    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                        if (target.length) {
+                            $('html,body').animate({
+                                scrollTop: target.offset().top - 40
+                            }, 900);
+                            return false;
+                        }
+                    }
+                });
+
+                /*====================================
+                 Show Menu on Book
+                 ======================================*/
+                $(window).bind('scroll', function () {
+                    var navHeight = $(window).height() - 100;
+                    if ($(window).scrollTop() > navHeight) {
+                        $('.navbar-default').addClass('on');
+                    } else {
+                        $('.navbar-default').removeClass('on');
+                    }
+                });
+                /* ==============================================
+                 Scroll Spy
+                 =============================================== */
+                $('body').scrollspy({
+                    target: '.navbar-default',
+                    offset: 80
+                })
+
+            }());
+        }
+        main();
+    </script>
+    <!-- Menu
+================================================== -->
+    <nav id="art-menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collasped">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home">Dhanu !</a>
+            </div>
+
+            <!-- Navigation Toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collasped">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home" class="scroll-nav">Home</a></li>
+                    <li><a href="#about" class="scroll-nav">About</a></li>
+                    <li><a href="#portfolio" class="scroll-nav">Portfolio</a></li>
+                    <li><a href="#footer" class="scroll-nav">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="home" class="text-center">
+        <div class="layer">
+            <div class="content">
+                <h1>Hi I'm <strong><span>DhanaLakshmi</span></strong></h1>
+                <p class="lead">Front-End Developer</p>
+                <a href="#about" class="fa fa-angle-down scroll-nav"></a>
+            </div>
+        </div>
+
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="section-title center text-center">
+                <h2><strong>ABOUT Me</strong></h2>
+                <div class="line">
+                </div>
+            </div>
+            <div class="gap"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Hi there, I’m <strong>DhanaLakshmi</strong>.</p>
+                    <p>I'm a Frontend Developer whose whole interest is building interactive, accessible, and responsive websites.</p>
+
+                    <p>I'm currently open to Job opportunities where I can contribute to your business and make your users happy. Contact me if you're interested in having a taste of my skills.</p>
+                    
+                    <p><strong>Thanks</strong> for stopping by!</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                            aria-valuemin="0" aria-valuemax="100" data-width="70%" style="width:80%;">
+                            80% - ReactJS
+                        </div>
+                    </div>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                            aria-valuemin="0" aria-valuemax="100" data-width="20%" style="width:20%;">
+                            20% - WordPress
+                        </div>
+                    </div>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                            aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                            60% - E-commerce
+                        </div>
+                    </div>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                            80% - HTML & CSS
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+ 
+    <!-- Works
+================================================== -->
+    <div id="portfolio" class="text-center">
+        <div class="container">
+
+            <div class="section-title center">
+                <h2>My WORKS</h2>
+                <div class="line">
+
+                </div>
+            </div>
+            <div class="gap"></div>
+            <section id="works" class="container">
+
+
+                <ul class="portfolio-items col-4">
+                    <li class="portfolio-item apps">
+                        <div class="item-inner">
+                            <img src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901783.jpg?w=900&t=st=1684765690~exp=1684766290~hmac=1819c6b5d0d2eedbed5e1a8306d2f7f41695055db42572ae3e533c21c425eea2"
+                                alt="html">
+                            <h5>HTML</h5>
+                            <div class="layer">
+                                <a class="preview view"
+                                    href="https://img.freepik.com/free-photo/programming-background-collage_23-2149901783.jpg?w=900&t=st=1684765690~exp=1684766290~hmac=1819c6b5d0d2eedbed5e1a8306d2f7f41695055db42572ae3e533c21c425eea2"><i
+                                        class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item logo apps">
+                        <div class="item-inner">
+                            <img src="https://img.freepik.com/premium-photo/3d-illustration-word-css_93826-646.jpg?w=996"
+                                alt="css">
+                            <h5>CSS</h5>
+                            <div class="layer">
+                                <a class="preview view"
+                                    href="https://img.freepik.com/premium-photo/3d-illustration-word-css_93826-646.jpg?w=996"><i
+                                        class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+
+
+                    <li class="portfolio-item apps web">
+                        <div class="item-inner">
+                            <img src="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg?w=900&t=st=1684765554~exp=1684766154~hmac=abd71fb038b0ce7ec1db054e31c807e6102ed38f4ea2dfc1b16b66cf6e9da21f"
+                                alt="JS">
+                            <h5>JAVASCRIPT</h5>
+                            <div class="layer">
+                                <a class="preview view"
+                                    href="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept_335657-2412.jpg?w=900&t=st=1684765554~exp=1684766154~hmac=abd71fb038b0ce7ec1db054e31c807e6102ed38f4ea2dfc1b16b66cf6e9da21f"><i
+                                        class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+                    <li class="portfolio-item apps">
+                        <div class="item-inner">
+                            <img src="https://img.freepik.com/free-vector/javascript-frameworks-concept-illustration_114360-743.jpg?size=626&ext=jpg&ga=GA1.1.535920204.1653909109&semt=sph"
+                                alt="reactjs">
+                            <h5>FrameWork - ReactJS</h5>
+                            <div class="layer">
+                                <a class="preview view"
+                                    href="https://img.freepik.com/free-vector/javascript-frameworks-concept-illustration_114360-743.jpg?size=626&ext=jpg&ga=GA1.1.535920204.1653909109&semt=sph"><i
+                                        class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                    <!--/.portfolio-item-->
+
+
+                </ul>
+            </section>
+            <!--/#portfolio-->
+        </div>
+    </div>
+
+    <!-- Footer
+================================================== -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container text-center">
+                <div class="footer-logo">
+                    <a href="https://codepen.io/jvjijith/pen/woMywq">DhanaLakshmi</a>
+                </div>
+                <div class="social-icons">
+                    <ul>
+
+                        <li><a class="facebook" href=""><i class="fa fa-facebook icon-sm"></i></a></li>
+                        <li><a class="linkedin" href=""><i class="fa fa-linkedin icon-sm"></i></a></li>
+                        <li><a class="tumblr" href=""><i class="fa fa-github icon-sm"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>&copy; 2023 Dhana</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="pull-right">Developed by <a
+                                href="https://www.freecodecamp.com/jvjijith">DhanaLakshmi</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
